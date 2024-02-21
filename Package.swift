@@ -11,12 +11,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/xcode73/feather-core", .branch("test-dev")),
-        .package(url: "https://github.com/xcode73/feather-objects", .branch("test-dev")),
+        .package(url: "https://github.com/xcode73/redirect-objects", .branch("test-dev")),
     ],
     targets: [
         .target(name: "RedirectModule", dependencies: [
             .product(name: "Feather", package: "feather-core"),
-            .product(name: "FeatherObjects", package: "feather-objects"),
+            .product(name: "RedirectObjects", package: "redirect-objects"),
         ],
         resources: [
 //            .copy("Bundle"),
