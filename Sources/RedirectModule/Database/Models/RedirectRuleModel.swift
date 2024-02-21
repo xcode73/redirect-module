@@ -32,7 +32,7 @@ final class RedirectRuleModel: FeatherDatabaseModel {
     init(id: UUID? = nil,
          source: String,
          destination: String,
-         statusCode: Int = Int(RedirectType.normal.status.code),
+         statusCode: Int = Int(Redirect.normal.status.code),
          notes: String? = nil)
     {
         self.id = id

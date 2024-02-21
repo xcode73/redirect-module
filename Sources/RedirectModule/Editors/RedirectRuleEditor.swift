@@ -46,19 +46,19 @@ struct RedirectRuleEditor: FeatherModelEditor {
             .config {
                 $0.output.context.label.required = true
                 $0.output.context.label.title = "Status code"
-                $0.output.context.options = Redirect.Rule.StatusCode.allCases.map { OptionContext(key: String($0.rawValue), label: String($0.rawValue)) }
-                $0.output.context.value = String(Redirect.Rule.defaultStatusCode.rawValue)
+                $0.output.context.options = RedirectApi.Rule.StatusCode.allCases.map { OptionContext(key: String($0.rawValue), label: String($0.rawValue)) }
+                $0.output.context.value = String(RedirectApi.Rule.defaultStatusCode.rawValue)
             }
             .validators {
                 FormFieldValidator($1, "Invalid status") { _, field in
                     guard let value = Int(field.input) else {
                         return false
                     }
-                    return Redirect.Rule.StatusCode(rawValue: value) != nil
+                    return RedirectApi.Rule.StatusCode(rawValue: value) != nil
                 }
             }
             .read { $1.output.context.value = String(model.statusCode) }
-            .write { model.statusCode = Int($1.input) ?? Redirect.Rule.defaultStatusCode.rawValue }
+            .write { model.statusCode = Int($1.input) ?? RedirectApi.Rule.defaultStatusCode.rawValue }
         
         TextareaField("notes")
             .read { $1.output.context.value = model.notes }
