@@ -18,7 +18,7 @@ struct RedirectAdminWidgetTemplate: TemplateRepresentable {
         Svg.arrowRightCircle
         H2("Redirect")
         Ul {
-            if req.checkPermission(Redirect.Rule.permission(for: .list)) {
+            if req.checkPermission(RedirectApi.Rule.permission(for: .list)) {
                 Li {
                     A("Rules")
                         .href("/admin/redirect/rules/")
