@@ -1,25 +1,26 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "redirect-module",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v10_15)
     ],
     products: [
-        .library(name: "RedirectModule", targets: ["RedirectModule"]),
+        .library(name: "RedirectModule", targets: ["RedirectModule"])
     ],
     dependencies: [
-        .package(url: "https://github.com/xcode73/feather-core", .branch("test-dev")),
-        .package(url: "https://github.com/xcode73/redirect-objects", .branch("test-dev")),
+        .package(url: "https://github.com/xcode73/feather-core", branch: "test-dev"),
+        .package(url: "https://github.com/xcode73/redirect-objects", branch: "test-dev")
     ],
     targets: [
         .target(name: "RedirectModule", dependencies: [
             .product(name: "Feather", package: "feather-core"),
-            .product(name: "RedirectObjects", package: "redirect-objects"),
+            .product(name: "RedirectObjects", package: "redirect-objects")
         ],
         resources: [
-//            .copy("Bundle"),
+//            .copy("Bundle")
         ]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
