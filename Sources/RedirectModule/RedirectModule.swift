@@ -62,7 +62,7 @@ struct RedirectModule: FeatherModule {
                     return nil
                 }
 
-        let type: RedirectType
+        let type: Redirect
         switch UInt(rule.statusCode) {
         case HTTPResponseStatus.movedPermanently.code:
             type = .permanent
