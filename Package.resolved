@@ -33,7 +33,7 @@
       "location" : "https://github.com/xcode73/feather-core.git",
       "state" : {
         "branch" : "test-dev",
-        "revision" : "6729ce939373604af0ac12ca86c4fe8434eb9c72"
+        "revision" : "bc890ea3e62dda774957fcbc967177768e602d69"
       }
     },
     {
@@ -48,7 +48,7 @@
     {
       "identity" : "feather-objects",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/xcode73/feather-objects",
+      "location" : "https://github.com/xcode73/feather-objects.git",
       "state" : {
         "branch" : "test-dev",
         "revision" : "7ea11be04bb31c4c9624f14b55baecdb203427cf"
@@ -123,7 +123,7 @@
       "location" : "https://github.com/xcode73/redirect-objects.git",
       "state" : {
         "branch" : "test-dev",
-        "revision" : "8803cc0403aced023e54c8ebce303587742dfb2b"
+        "revision" : "c10ebc0f53d521189f826d01aa9b3d15ff229c1a"
       }
     },
     {
