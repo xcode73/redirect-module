@@ -71,7 +71,7 @@ struct RedirectModule: FeatherModule {
         default:
             type = .normal
         }
-        return req.redirect(to: rule.destination, type: type)
+        return req.redirect(to: rule.destination, redirectType: type)
     }
 
 }
