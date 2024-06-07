@@ -12,11 +12,11 @@ import FeatherObjects
 import RedirectObjects
 
 public extension HookName {
-//    static let permission: HookName = "redirect"
+    static let permission: HookName = "redirect"
 }
 
 /**
- Allows configuring of redirects via Redirect.Rule instances.  Redirects turn a
+ Allows configuring of redirects via RedirectApi.Rule instances.  Redirects turn a
  GET request to a given source path into a redirect to a destination URL,
  either relative or absolute.  Redirect type is specified by statusCode (301,
  303, or 308).
@@ -68,6 +68,8 @@ struct RedirectModule: FeatherModule {
             type = .permanent
         case HTTPResponseStatus.temporaryRedirect.code:
             type = .temporary
+        case HTTPResponseStatus.permanentRedirect.code:
+            type = .permanentPost
         default:
             type = .normal
         }

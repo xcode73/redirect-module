@@ -10,8 +10,10 @@ let package = Package(
         .library(name: "RedirectModule", targets: ["RedirectModule"])
     ],
     dependencies: [
-        .package(url: "https://github.com/xcode73/feather-core.git", branch: "test-dev"),
-        .package(url: "https://github.com/xcode73/redirect-objects.git", branch: "test-dev")
+        .package(path: "../feather-core"),
+        .package(path: "../redirect-objects"),
+//        .package(url: "https://github.com/xcode73/feather-core.git", branch: "test-dev"),
+//        .package(url: "https://github.com/xcode73/redirect-objects.git", branch: "test-dev")
     ],
     targets: [
         .target(name: "RedirectModule", dependencies: [
