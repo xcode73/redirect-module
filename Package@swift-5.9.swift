@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.9
 import PackageDescription
 import Foundation
 
@@ -18,7 +18,8 @@ let package = Package(
             name: "RedirectApi",
             dependencies: [
                 .product(name: "FeatherCoreApi", package: "feather-core")
-            ]
+            ],
+            swiftSettings: [.enableExperimentalFeature("StrictConcurrency=complete")]
         ),
         .target(
             name: "RedirectModule",
@@ -28,7 +29,8 @@ let package = Package(
             ],
             resources: [
                 //            .copy("Bundle"),
-            ]
+            ],
+            swiftSettings: [.enableExperimentalFeature("StrictConcurrency=complete")]
         ),
     ]
 )
